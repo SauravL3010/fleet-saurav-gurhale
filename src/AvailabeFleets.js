@@ -7,7 +7,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 export default function AvailabeFleets({searchTerm}) {
 
-  const { error, isPending, data: fleets } = useFetch(`http://localhost:8000/data?q=${searchTerm}`)
+  const { error, isPending, data: fleets } = useFetch(`https://my-json-server.typicode.com/SauravL3010/fleet-saurav-gurhale/data?q=${searchTerm}`)
 
   // Create a set of all the availabe fleets, removing duplicates
   const fleetSet = new Set();
