@@ -1,11 +1,15 @@
-# Getting Started with Create React App
+# Instructions to Run the Fleet Intern Interview Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## This project is deployed and published:
+Open [https://sauravl3010.github.io/fleet-saurav-gurhale/](https://sauravl3010.github.io/fleet-saurav-gurhale/) to view it in your browser.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install` to install all the dependencies
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -14,57 +18,36 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## How was API created:
+Traditionally to creact a REST API for any application, I would use standard tools such as Node.js or Django. But since this project requires limited data points, I have hosted the provided Response Data on my github repo and have used this as my API end-point. 
+Open [Open [http://localhost:3000](http://localhost:3000) to view it in your browser.](Open [http://localhost:3000](http://localhost:3000) to view it in your browser.) to view JSON API in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## NOTES:
+This API does not support update and delete functions. Therefore, the app only comsumes API data, and does not update it in any way. 
+The Update button on the app, simply closes the Modal window that appears on top. 
 
-### `npm run build`
+## Known Bugs:
+The search bar in the app searches through entire db and is not only limited to "name" and "modeType". But, as stated in the requirement of the app:
+`* A user should be able to search by mode type and/or name.`
+`* A user should only see unique services but should be able to view all the mode types a service offers.`
+  `* E.g. If Scoot returns with mode types scootershare, bikeshare, escootershare. You should only show one instance of Scoot and show all the three mode types in the sub heading.`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The above requirement is satisfied.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Comments:
+Due to limited time, I was not able to the bonus function, but the following is how I would approch it:
+ - Have an API endpoint which supports Create and Delete functions
+ - In React, I would target with providers name and update its description and website as an event on update button. 
+ - Below, is the approch I would have taken to satisfy the above
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Approach (To create a complete application, including backend)
+DataBase:
+ - I would have created the database with unique id's, so its easy to fetch target id's and modify, and combine multiple modeTypes of single provider with single array of modeTypes.
+API:
+ - create with node.js that allows CRUD applications such as Create or Modify
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
